@@ -1,46 +1,40 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta charset="UTF-8">
-  <title>DKD Login</title>
+<meta charset="UTF-8">
+<title>DKD Login</title>
 </head>
 <body>
-  <div id="app"></div>
-
-  <!-- React & Babel CDN -->
-  <script src="https://unpkg.com/react@17/umd/react.production.min.js"></script>
-  <script src="https://unpkg.com/react-dom@17/umd/react-dom.production.min.js"></script>
-  <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
-
-  <!-- Tumhara code -->
-  <script type="text/babel">
-    const { useState } = React;
-
-    function LoginPage() {
-      const [name, setName] = useState('');
-      const [phone, setPhone] = useState('');
-      const [email, setEmail] = useState('');
-
-      const handleSubmit = (e) => {
-        e.preventDefault();
-        alert(`Name: ${name}\nPhone: ${phone}\nEmail: ${email}`);
-      };
-
-      return (
-        <div style={{ textAlign: 'center', marginTop: '50px' }}>
-          <h2>DKD Login</h2>
-          <form onSubmit={handleSubmit}>
-            <input type="text" placeholder="Name" value={name} onChange={(e) => setName(e.target.value)} /><br /><br />
-            <input type="tel" placeholder="Phone" value={phone} onChange={(e) => setPhone(e.target.value)} /><br /><br />
-            <input type="email" placeholder="Email" value={email} onChange={(e) => setEmail(e.target.value)} /><br /><br />
-            <button type="submit">Login</button>
-          </form>
-        </div>
-      );
-    }
-
-    ReactDOM.render(<LoginPage />, document.getElementById('app'));
-  </script>
+<div id="app"></div>
+<!-- React & Babel CDN -->
+<script src="https://unpkg.com/react@17/umd/react.production.min.js"></script>
+<script src="https://unpkg.com/react-dom@17/umd/react-dom.production.min.js"></script>
+<script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+<!-- code -->
+<script type="text/babel">
+const { useState } = React;
+  function LoginPage() {
+  const [name, setName] = useState('');
+  const [phone, setPhone] = useState('');
+  const [email, setEmail] = useState('');
+ const handleSubmit = (e) => {
+e.preventDefault();
+alert(`Name: ${name}\nPhone: ${phone}\nEmail: ${email}`);
+};
+    return (
+    <div style={{ textAlign: 'center', marginTop: '50px' }}>
+    <h2>DKD Login</h2>
+    <form onSubmit={handleSubmit}>
+    <input type="text" placeholder="Name" value={name} onChange={(e) => setName(e.target.value)} /><br /><br />
+    <input type="tel" placeholder="Phone" value={phone} onChange={(e) => setPhone(e.target.value)} /><br /><br />
+    <input type="email" placeholder="Email" value={email} onChange={(e) => setEmail(e.target.value)} /><br /><br />
+    <button type="submit">Login</button>
+    </form>
+    </div>
+     );
+  }
+ReactDOM.render(<LoginPage />, document.getElementById('app'));
+</script>
 </body>
 </html>
 
